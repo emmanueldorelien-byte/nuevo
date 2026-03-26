@@ -8,7 +8,7 @@ import { useSettings } from "@/hooks/use-settings";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 import { useMutation } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
-import subscriptionQR from "@assets/WhatsApp_Image_2026-03-06_at_10.13.00_1772803512189.jpeg";
+//import subscriptionQR from "@assets/WhatsApp_Image_2026-03-06_at_10.13.00_1772803512189.jpeg";
 
 const PAYPAL_LINK = "https://www.paypal.com/ncp/payment/Y8BXGP5FR44PC";
 const WHATSAPP_NUMBER = "5493517864452";
@@ -127,11 +127,10 @@ export function SubscriptionModal({ open, onClose, blocking = false }: Subscript
                   <QRCodeSVG value={paymentLink} size={220} bgColor="#ffffff" fgColor="#000000" level="M" />
                 ) : (
                   <img
-                    src={subscriptionQR}
-                    alt="QR de suscripción"
-                    className="w-[220px] h-[220px] object-contain"
-                    data-testid="img-subscription-qr"
-                  />
+  src="https://placehold.co/220x220?text=Escanear+QR"
+  alt="QR de suscripción"
+  className="w-[220px] h-[220px] object-contain"
+/>
                 )}
               </div>
             </>
